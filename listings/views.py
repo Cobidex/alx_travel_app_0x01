@@ -1,13 +1,13 @@
 from rest_framework import viewsets
-from .models import Listing, Booking
-from .serializers import ListingSerializer, BookingSerializer
+from .models import Property, Booking
+from .serializers import PropertySerializer, BookingSerializer
 
-class ListingViewSet(viewsets.ModelViewSet):
+class PropertyViewSet(viewsets.ModelViewSet):
     """
-    A viewset for performing CRUD operations on Listing model.
+    A viewset for performing CRUD operations on Property model.
     """
-    queryset = Listing.objects.all()
-    serializer_class = ListingSerializer
+    queryset = Property.objects.all()
+    serializer_class = PropertySerializer
 
 class BookingViewSet(viewsets.ModelViewSet):
     """

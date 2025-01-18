@@ -13,7 +13,7 @@ class User(models.Model):
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
-class Listing(models.Model):
+class Property(models.Model):
     property_id = models.UUIDField(primary_key=True)
     host_id = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
@@ -26,9 +26,10 @@ class Listing(models.Model):
     def __str__(self):
         return self.name
 
+
 class Booking(models.Model):
     booking_id = models.UUIDField(primary_key=True)
-    property_id = models.ForeignKey(Listing, on_delete=models.CASCADE)
+    property_id = models.ForeignKey(Property, on_delete=models.CASCADE)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField()
