@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/stephen/alx_travel_app_0x01/env
+set -gx VIRTUAL_ENV /home/stephen/alx-backend-python/messaging_app/env
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
